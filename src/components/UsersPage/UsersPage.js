@@ -1,7 +1,6 @@
-import CardList from "../CardList/CardList";
+import UserCardList from "../UserCardList/UserCardList";
 import {getUsers} from "../../utils/httpGet";
 import {useEffect, useState} from "react";
-import UserCard from "../UserCard/UserCard";
 import {getFavorites, storeFavorites} from "../../utils/localstorage";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
@@ -27,15 +26,13 @@ const UsersPage = () => {
             <Breadcrumbs />
             <h2>Favorites</h2>
             <hr />
-            <CardList
-                CardType={UserCard}
+            <UserCardList
                 items={users.filter(x => fave.includes(x.id))}
                 toggleFave={toggleFave}
             />
             <h2>Users</h2>
             <hr />
-            <CardList
-                CardType={UserCard}
+            <UserCardList
                 items={users.filter(x => !fave.includes(x.id))}
                 toggleFave={toggleFave}
             />
