@@ -36,7 +36,9 @@ const AlbumPage = () => {
                     className="AlbumPage__ZoomPic"
                     style={{backgroundImage: `url(${zoomPic.url})`}}
                     onClick={() => setZoomPic()}
-                />
+                >
+                    <p className="AlbumPage__ZoomPicName">{zoomPic.title}</p>
+                </div>
             }
         </main>
     )

@@ -17,6 +17,14 @@
     width: 100vw;
     height: 100vh;
     content: "";
+    background-color: rgba(1,1,1,0.8);
     background-position: center;
     background-repeat: no-repeat;
+}
+.AlbumPage__ZoomPicName {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    color: white;
 }
