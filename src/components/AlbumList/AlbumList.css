@@ -1,0 +1,19 @@
+.AlbumList {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.AlbumCard {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    padding: 16px 8px;
+    margin: 8px;
+    border-radius: 4px;
+    background-color: rgb(205, 229, 255);
+}
+
+.AlbumCard__Link {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}

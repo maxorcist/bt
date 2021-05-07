@@ -1,0 +1,28 @@
+.UserCard {
+    position: relative;
+    width: 200px;
+    padding: 16px 8px;
+    margin: 8px;
+    border-radius: 4px;
+    background-color: rgb(205, 229, 255);
+}
+
+.UserCard__Star {
+    position: absolute;
+    z-index: 3;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    padding: 8px;
+    margin: 2px;
+}
+
+.UserCard__Link {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

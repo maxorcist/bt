@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import UsersPage from "./components/UsersPage/UsersPage";
+import UserPage from "./components/UserPage/UserPage";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+} from "react-router-dom";
+import AlbumPage from "./components/AlbumPage/AlbumPage";
+import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
+import {useState} from "react";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App__Header">
       </header>
+        <Router>
+            <Switch>
+                <Route exact path="/users">
+                    <UsersPage />
+                </Route>
+                <Route path="/users/:id/:albumId">
+                    <AlbumPage />
+                </Route>
+                <Route path="/users/:id">
+                    <UserPage />
+                </Route>
+                <Route path="/">
+                    <Redirect to="/users" />
+                </Route>
+            </Switch>
+        </Router>
     </div>
   );
 }
