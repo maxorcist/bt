@@ -15,8 +15,6 @@ import {useState} from "react";
 function App() {
   return (
     <div className="App">
-      <header className="App__Header">
-      </header>
         <Router>
             <Switch>
                 <Route exact path="/users">

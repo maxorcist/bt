@@ -17,8 +17,10 @@ const AlbumPage = () => {
     return (
         <main className="AlbumPage">
             <Breadcrumbs />
-            <h1>{albumName}</h1>
-            <p>{pics?.length}</p>
+            <header className="AlbumPage__Header">
+                <h2>{albumName}</h2>
+                <p>{pics?.length}</p>
+            </header>
             {!!pics &&
                 <div className="AlbumPage__Container">
                 {pics.map((pic, i) =>

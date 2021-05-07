@@ -6,8 +6,8 @@
 .AlbumCard {
     position: relative;
     width: 200px;
-    height: 100px;
-    padding: 16px 8px;
+    height: 50px;
+    padding: 16px 16px;
     margin: 8px;
     border-radius: 4px;
     background-color: rgb(205, 229, 255);

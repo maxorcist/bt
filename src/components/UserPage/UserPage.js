@@ -1,10 +1,11 @@
+import './UserPage.css';
 import { useParams } from 'react-router-dom';
 import {getAlbums, getUser} from "../../utils/httpGet";
 import {useEffect, useState} from "react";
 import AlbumList from "../AlbumList/AlbumList";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
-const UsersPage = ({ setLocation }) => {
+const UsersPage = () => {
     const { id } = useParams();
     const [user, setUser] = useState()
     const [albums, setAlbums] = useState()
@@ -15,14 +16,14 @@ const UsersPage = ({ setLocation }) => {
 
     return (
         <main className="UserPage">
-            <Breadcrumbs user={user} />
+            <Breadcrumbs />
             {!!user &&
-            <div className="UserPage__Header">
+            <header className="UserPage__Header">
                 <h2>{user.name}</h2>
                 <div className="UserPage__HeaderInfo">
                     <p>{user.company.name} - {user.email} - {user.address.street}</p>
                 </div>
-            </div>
+            </header>
             }
             {!!albums &&
             <div>
